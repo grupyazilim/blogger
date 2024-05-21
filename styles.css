@@ -1,0 +1,61 @@
+:root{
+   --main-color:#0eaaf8;
+   --black-color:#0e0e0e;
+   --border:0.1rem solid rgba(255, 255, 255, 0.304);/*kenarlık*/
+   /* 1rem=16px  ama 1rem i 10 pixel yapıcaz*/
+}
+*{
+   margin:0;/* etiketlerin etrafındaki boşluk */
+   padding:0;/*eleman sınırı ile eleman içeriği arasındaki boşluk*/
+   box-sizing: border-box;/*bir etikkette, padding ve border genişlik ve yüksekliğe dahil edilir*/
+   outline: none;/*etiketin öne çıkmasını sağlamak için etiketin dışında çizilen bir çizgidir*/
+   border: none;/*kenarlık ekleme*/
+   text-decoration: none;/*metin biçimlendirmeleri*/
+   text-transform: capitalize;/*yazı karakterlerini büyük küçük harf*/
+   transition: 0.2s ease;/*geçiş 2 saniye*/
+}
+html {
+   font-size:62.5%;
+   overflow-x:hidden;/*sayfa sınırını aşan kısmının gizlenmesi*/
+   scroll-padding-top:9rem;/*yukarıya kaydır*/
+   scroll-behavior: smooth;/*kaydırma işlemi sırasında sayfanın pürüzsüz bir şekilde kaymasını sağlar*/
+}
+body{
+   background-color: var(--main-color);/*sayfa rengi*/
+   height:200vh;/*kaydırma boyutu*/
+}
+/*header başlayalım*/
+.header.logo img {
+   height: 100px;
+}
+.header{
+   background-color: white;
+   display:flex;/* hizalar*/
+   align-items:center;/*ortalı şekilde sıralar*/
+   justify-content:space-between;/*ögeler arasında eşit boşluk bırakarak hizalar*/
+   padding:0 7%;/*aşağıdan yukarıdan 0 sağdan soldan 7 */
+   margin: 2rem 7%;/*etrafında boşluk oluşturmak içindir*/
+   border-radius: 30rem;/* köşeleri yuvarlama*/
+   box-shadow:0px 0px 17px -2px rgba(0, 0, 0, 0.75);/*gölgelik*/
+   position:sticky;/*kaydırma çubuklarını takip eder*/
+   top:0;/*nesneyi o noktada sabitler*/
+   z-index: 1000;/*her zaman önde olsun*/ 
+}
+.header .navbar a{
+   font-style:normal;/*yazı tipi*/
+   margin:0 12px ;/*yazıların birbirinden uzaklığı*/
+   font-size: 18px;/*boyut*/
+   color:var(--black-color);
+   border-bottom:2px solid transparent;/* alt kenarlık*/
+}
+.header .navbar a:hover {
+   /*hover:fare üstüne geldiğinde alt çizgi gösterir*/
+   border-color: rgba(42, 109, 203, 0.836);
+   padding-bottom: 3px;/*aşağı kayma*/
+}
+.header .buttons button {
+   cursor:pointer;/*imlec görünümü*/
+   font-size: 20px;
+   margin-left:15px;
+   background-color: transparent; 
+}

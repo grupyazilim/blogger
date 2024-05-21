@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous" 
+    referrerpolicy="no-referrer" /><!--burası kütüphaneden geldi font awesome cdn-->
+    <title>Blog Web Site</title><!--title, web sitesinin başlığı-->
+    <link rel="stylesheet" href="styles/styles.css"><!--Burda css ile bağlantı kuruldu-->
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><!--a href="#" geçerli sayfanın üst kısmına link vermeye yarar-->
+            <img src="images/logo.png" alt="logo" width="50" height="50"/><!--img src, logonun resimi -->
+        </a>
+        <nav class="navbar"><!--navbar, kullanıcıların sayfalar arasında gezinmesini sağlar -->
+            <a href="#">Ana Sayfa</a> 
+            <a href="#">Bloglar</a>
+            <a href="#">Yazarlar</a>
+            <a href="#">Kategoriler</a>
+            <a href="#">Hakkımızda</a>
+            <a href="#">İletişim</a>
+        </nav> 
+        <div class="buttons"><!--div, sayfayı bölümlere ayırmamıza yarar-->
+            <button><!-- i class kısmını font awesome sitesinden kopyaladım -->
+                <i class="fas fa-search" ></i><!--arama ikonu-->
+            </button>
+            <button>
+                <i class="fa-solid fa-right-to-bracket"></i><!-- log in butonu-->
+            </button>
+            <button>
+                <i class="fas fa-bars"></i><!--seçenek ikonu büyük ekranda kaybolacak-->
+            </button>
+        </div>
+    </header>
+    <div class="wrapper"><!-- log in sayfası oluşturuyoruz -->
+        <div class="from-box login">
+            <h2>Log in</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon><!--mail icon sembolü ionicons tan geldi-->
+                    </span>
+                    <input type="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon><!--kilit icon sembolu ionicons tan geldi-->
+                    </span>
+                    <input type="password"required>
+                    <label>Şifre</label>
+                </div>
+                <div class="remember-forgot"><!--beni hatırla-->
+                    <label><input type="checkbox"><!--kutucuk koyduk-->
+                    Beni hatırla</label>
+                    <a href="#">Şifremi unuttum</a>
+                </div>
+                <button type="submit" class="btn">Oturum aç</button>
+                <div class="log in-register"><!-- hesabın yok ise kayıt ol-->
+                    <p>HEsabın yok mu? <a href="#" class="register-link">Kayıt olgi</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module"
+     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script><!--ionicons kütüphanesinden geldi-->
+</body>
+</html>
